@@ -1,0 +1,35 @@
+﻿@model UpdateMemberVM
+
+
+
+
+
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name">
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PositionId">Positions</label>
+        <select class="form-control form-control-sm"
+                asp-for="PositionId"
+                asp-items="@(new SelectList(Model.Positions, "Id", "Name"))">
+            <option value="">Select Designation</option>
+        </select>
+        <span asp-validation-for="PositionId"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile">Image</label>
+        <input asp-for="ImageFile" class="form-control">
+        <span asp-validation-for="ImageFile"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" asp-action="Update">Submit</button>
+
+</form>

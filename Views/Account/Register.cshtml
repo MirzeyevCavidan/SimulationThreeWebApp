@@ -1,0 +1,81 @@
+﻿﻿@using SimulationThreeWebApp.ViewModels.Account
+@model RegisterVM
+
+
+
+
+
+
+
+
+<!-- Begin Main Content Area -->
+<main class="main-content">
+    <section class="register-section">
+        <div class="container">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-lg-5 col-md-7 col-sm-10">
+
+                    <div class="card p-4 shadow border rounded-3">
+                        <h2 class="text-center mb-3">Register</h2>
+
+                        <form method="post">
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2"></div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label asp-for="Name" class="form-label">Name</label>
+                                    <input asp-for="Name" class="form-control" placeholder="Name">
+                                    <span asp-validation-for="Name" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="SurName" class="form-label">SurName</label>
+                                    <input asp-for="SurName" class="form-control" placeholder="SurName">
+                                    <span asp-validation-for="SurName" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label asp-for="UserName" class="form-label">UserName</label>
+                                    <input asp-for="UserName" class="form-control" placeholder="UserName">
+                                    <span asp-validation-for="UserName" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12">
+                                    <label asp-for="Email" class="form-label">Email</label>
+                                    <input asp-for="Email" class="form-control" placeholder="example@mail.com">
+                                    <span asp-validation-for="Email" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="Password" class="form-label">Password</label>
+                                    <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+                                    <span asp-validation-for="Password" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password">
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        Register
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                    <
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+<!-- Main Content Area End Here -->

@@ -1,0 +1,86 @@
+﻿@model List<Member>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Member Table</h1>
+    <p class="mb-4">
+        DataTables is a third party plugin that is used to generate the demo table below.
+        For more information about DataTables, please visit the <a target="_blank"
+                                                                   href="https://datatables.net">official DataTables documentation</a>.
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Members</h6>
+
+            <a asp-area="Admin" asp-controller="Member" asp-action="Delete" class="btn btn-warning">Delete</a>
+
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                    <thead>
+                        <tr>
+
+                            <th>Id</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+
+
+
+                    <tbody>
+
+                        @foreach (Member member in Model)
+                        {
+                            <tr>
+
+                                <td>@member.Id</td>
+
+                                <td>
+                                    <img src="~/assests/images/@member.ImagePath?" style="width:120px; height:120px object-fit=cover">
+                                </td>
+                                
+                                <td>@member.Name</td>
+
+                                <td>@member.Position.Name</td>
+
+                                <td>
+                                    <a asp-area="Admin" asp-controller="Member" asp-action="Update" asp-route-id="@member.Id" class="btn btn-secondary">Update</a>
+                                    <a asp-area="Admin" asp-controller="Member" asp-action="Delete" asp-route-id="@member.Id" class="btn btn-warning">Delete</a>
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+            </div>
+<!-- End of Main Content -->

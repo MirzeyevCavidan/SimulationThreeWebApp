@@ -1,0 +1,12 @@
+﻿@model Position
+
+
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name">
+        <span asp-validation-for="Name"></span>
+    <button type="submit" class="btn btn-primary" asp-action="Create">Submit</button>
+</form>
